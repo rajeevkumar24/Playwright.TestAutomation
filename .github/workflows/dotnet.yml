@@ -29,4 +29,5 @@ jobs:
     - name: Install Browsers
       run: pwsh ${{ github.workspace }}/PlaywrightTest/bin/Debug/8.0/playwright.ps1 install --with-deps          
     - name: Test
+      working-directory: ${{ github.workspace }}/PlaywrightTest
       run: dotnet test --no-build --verbosity normal
